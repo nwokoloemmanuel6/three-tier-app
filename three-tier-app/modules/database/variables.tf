@@ -1,4 +1,3 @@
-
 variable "db_storage" {}
 variable "db_instance_class" {}
 variable "db_name" {}

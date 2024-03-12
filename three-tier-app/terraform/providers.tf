@@ -7,4 +7,8 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = local.location
+}
+
 
