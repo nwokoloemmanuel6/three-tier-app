@@ -2,7 +2,7 @@
 access_ip="0.0.0.0/0"
 db_name="threetier"
 dbuser="root"
-dbpassword="teddi"
+dbpassword="teddionit"
 
 
 
