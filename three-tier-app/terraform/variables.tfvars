@@ -1,5 +1,5 @@
 # ssh_key="Three-Tier-Terraform"
-access_ip=["0.0.0.0/0"]
+access_ip="0.0.0.0/0"
 db_name="mysql"
 dbuser="root"
 dbpassword="teddi"
