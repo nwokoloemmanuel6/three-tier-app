@@ -55,7 +55,7 @@ module "loadbalancing" {
   source            = "../modules/loadbalancing"
   lb_sg             = module.networking.lb_sg
   public_subnets    = module.networking.public_subnets
-  tg_port           = 80
+  tg_port           = 3000
   tg_protocol       = "HTTP"
   vpc_id            = module.networking.vpc_id
   app_asg           = module.compute.app_asg
