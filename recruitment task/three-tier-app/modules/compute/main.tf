@@ -57,7 +57,7 @@ resource "aws_launch_template" "three_tier_app" {
   instance_type          = var.instance_type
   image_id               = data.aws_ssm_parameter.three-tier-ami.value
   vpc_security_group_ids = [var.frontend_app_sg]
-  user_data              = filebase64("client.sh")
+  user_data              = filebase64("clients.sh")
   key_name               = var.key_name
 
   tags = {
@@ -109,7 +109,7 @@ resource "aws_autoscaling_group" "three_tier_backend" {
   max_size            = 3
   desired_capacity    = 2
 
-  depends_on = [ aws_db_instance.three_tier_db ]
+  depends_on = [ var.db_instance ]
 
   launch_template {
     id      = aws_launch_template.three_tier_backend.id
