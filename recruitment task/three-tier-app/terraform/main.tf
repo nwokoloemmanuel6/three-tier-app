@@ -34,7 +34,7 @@ module "compute" {
   ssh_key                = "Three-Tier-Terraform"
   lb_tg_name             = module.loadbalancing.lb_tg_name
   lb_tg                  = module.loadbalancing.lb_tg
-  db_instance            = module.database.db_instance
+  db_instance            = module.database.db_endpoint
 }
 
 module "database" {
