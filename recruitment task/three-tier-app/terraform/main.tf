@@ -62,6 +62,8 @@ module "loadbalancing" {
   listener_port     = 80
   listener_protocol = "HTTP"
   azs               = 2
+  auto_scale_backend = module.compute.auto_scale_backend
+  auto_scale_frontend = module.compute.auto_scale_frontend
 }
 
 

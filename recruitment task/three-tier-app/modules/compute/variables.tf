@@ -8,6 +8,7 @@ variable "lb_tg_name" {}
 variable "lb_tg" {}
 variable "db_instance" {}
 
+
 variable "ssh_key" {
   type  = string
 }

@@ -10,8 +10,8 @@ resource "aws_lb" "three_tier_lb" {
 
   depends_on = [
     var.app_asg,
-    aws_autoscaling_group.three_tier_backend,
-    aws_autoscaling_group.three_tier_app
+    var.auto_scale_backend,
+    var.auto_scale_frontend
   ]
 }
 
